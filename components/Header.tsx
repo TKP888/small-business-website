@@ -26,11 +26,11 @@ export default function Header() {
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
               <Image
-                src="/Black Font.png"
-                alt="Vercoe Property Maintenance"
+                src="/vpm black.svg"
+                alt="Vercoe Property Maintenance Logo"
                 width={200}
                 height={60}
-                className="h-18 w-auto"
+                className="h-24 w-auto"
                 priority
               />
             </Link>
@@ -42,14 +42,14 @@ export default function Header() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                className="text-gray-700 hover:text-blue-600 font-extrabold text-lg transition-colors"
               >
                 {link.name}
               </Link>
             ))}
             <Link
               href="/contact"
-              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium"
+              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-extrabold text-lg"
             >
               Get Quote
             </Link>

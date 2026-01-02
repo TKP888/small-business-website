@@ -9,8 +9,12 @@ export default function Hero() {
             Professional Contractor Services You Can Trust
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-blue-100">
-            Quality craftsmanship and exceptional service for all your
-            construction and renovation needs
+            I'm a local handyman based in South Gloucestershire, offering
+            dependable help with both small and large jobs. With over ten years
+            of experience in plumbing, painting, gardening, small electrical
+            work, and removals, I take pride in quality workmanship and a
+            friendly, reliable service. Get in touch for a no-obligation quote —
+            I'd be happy to help.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link

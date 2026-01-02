@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -16,9 +17,19 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-white text-xl font-bold mb-4">
-              Vercoe Property Maintenance
-            </h3>
+            <div className="flex items-center mb-4">
+              <Link href="/" className="flex items-center">
+                <Image
+                  src="/vpm white.svg"
+                  alt="Vercoe Property Maintenance Logo"
+                  width={200}
+                  height={60}
+                  className="h-16 w-auto"
+                  priority
+                />
+              </Link>
+            </div>
+
             <p className="mb-4">
               Professional contractor services you can trust. Quality
               workmanship and exceptional customer service.
@@ -72,8 +83,7 @@ export default function Footer() {
             <div className="mt-4">
               <h4 className="text-white font-semibold mb-2">Business Hours</h4>
               <ul className="space-y-1 text-sm">
-                <li>Monday - Friday: 8:00 AM - 6:00 PM</li>
-                <li>Saturday: 9:00 AM - 4:00 PM</li>
+                <li>Monday - Saturday: 8:00 AM - 5:00 PM</li>
                 <li>Sunday: Closed</li>
               </ul>
             </div>
