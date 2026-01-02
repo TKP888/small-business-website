@@ -77,8 +77,8 @@ export default function Footer() {
           <div>
             <h3 className="text-white text-xl font-bold mb-4">Service Areas</h3>
             <p className="mb-4">
-              Delivering quality contracting services throughout Bristol and the
-              surrounding communities.
+              Delivering quality contracting services throughout Bristol and
+              South Gloucestershire.
             </p>
             <div className="mt-4">
               <h4 className="text-white font-semibold mb-2">Business Hours</h4>
