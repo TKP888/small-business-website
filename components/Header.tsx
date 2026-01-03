@@ -72,9 +72,22 @@ export default function Header() {
             >
               <Link
                 href="/services"
-                className="text-gray-700 hover:text-blue-600 font-extrabold text-lg transition-colors cursor-pointer"
+                className="text-gray-700 hover:text-blue-600 font-extrabold text-lg transition-colors cursor-pointer flex items-center gap-1"
               >
                 Services
+                <svg
+                  className={`w-4 h-4 transition-transform ${
+                    isServicesOpen ? "rotate-180" : ""
+                  }`}
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path d="M19 9l-7 7-7-7" />
+                </svg>
               </Link>
               {isServicesOpen && (
                 <>
