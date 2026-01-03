@@ -26,7 +26,7 @@ export default function Hero() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
-              href="/contact"
+              href="/quote"
               className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors text-center"
             >
               Get Free Quote
