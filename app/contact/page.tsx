@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Reviews from "@/components/Reviews";
 import Link from "next/link";
 
 export default function Contact() {
@@ -146,6 +147,7 @@ export default function Contact() {
           </div>
         </section>
       </main>
+      <Reviews />
       <Footer />
     </>
   );

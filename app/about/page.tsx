@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Reviews from "@/components/Reviews";
 import Image from "next/image";
 
 export default function About() {
@@ -102,6 +103,7 @@ export default function About() {
           </div>
         </section>
       </main>
+      <Reviews />
       <Footer />
     </>
   );

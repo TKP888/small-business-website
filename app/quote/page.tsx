@@ -35,8 +35,11 @@ export default function Quote() {
   };
 
   const handlePostcodeLookup = async () => {
-    const postcode = formData.postcode.trim().toUpperCase().replace(/\s+/g, " ");
-    
+    const postcode = formData.postcode
+      .trim()
+      .toUpperCase()
+      .replace(/\s+/g, " ");
+
     if (!postcode) {
       setErrors((prev) => ({ ...prev, postcode: "Please enter a postcode" }));
       return;
@@ -69,9 +72,9 @@ export default function Quote() {
           data.result.admin_district,
           data.result.postcode,
         ].filter(Boolean);
-        
+
         const locationString = locationParts.join(", ");
-        
+
         // Validate postcode and enable address input
         setAddresses([locationString]);
         // Don't auto-fill address, let user enter it manually
@@ -293,7 +296,9 @@ export default function Quote() {
                       placeholder="your.email@example.com"
                     />
                     {errors.email && (
-                      <p className="mt-1 text-sm text-red-500">{errors.email}</p>
+                      <p className="mt-1 text-sm text-red-500">
+                        {errors.email}
+                      </p>
                     )}
                   </div>
 
@@ -313,9 +318,7 @@ export default function Quote() {
                         value={formData.postcode}
                         onChange={handleInputChange}
                         className={`flex-1 px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
-                          errors.postcode
-                            ? "border-red-500"
-                            : "border-gray-300"
+                          errors.postcode ? "border-red-500" : "border-gray-300"
                         }`}
                         placeholder="BS15 4HZ"
                         onBlur={handlePostcodeLookup}
@@ -352,9 +355,7 @@ export default function Quote() {
                         onChange={handleInputChange}
                         rows={3}
                         className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
-                          errors.address
-                            ? "border-red-500"
-                            : "border-gray-300"
+                          errors.address ? "border-red-500" : "border-gray-300"
                         }`}
                         placeholder="Enter your full address (street name, house number, etc.)"
                       />
@@ -369,13 +370,15 @@ export default function Quote() {
                     </div>
                   )}
 
-                  {!addresses.length && formData.postcode && !isLoadingAddresses && (
-                    <div>
-                      <p className="text-sm text-gray-600">
-                        Please search for your postcode above to continue.
-                      </p>
-                    </div>
-                  )}
+                  {!addresses.length &&
+                    formData.postcode &&
+                    !isLoadingAddresses && (
+                      <div>
+                        <p className="text-sm text-gray-600">
+                          Please search for your postcode above to continue.
+                        </p>
+                      </div>
+                    )}
 
                   {/* Job Description Field */}
                   <div>
@@ -420,8 +423,8 @@ export default function Quote() {
           </div>
         </section>
       </main>
+
       <Footer />
     </>
   );
 }
-

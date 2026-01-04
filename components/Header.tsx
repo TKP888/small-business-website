@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { services } from "@/lib/services";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,19 +16,6 @@ export default function Header() {
   const toggleServices = () => {
     setIsServicesOpen(!isServicesOpen);
   };
-
-  const services = [
-    { name: "Commercial", href: "/services/commercial" },
-    { name: "Refurbishments", href: "/services/refurbishments" },
-    { name: "Handyman", href: "/services/handyman" },
-    { name: "Carpentry", href: "/services/carpentry" },
-    { name: "Cleaning", href: "/services/cleaning" },
-    { name: "Decorating", href: "/services/decorating" },
-    { name: "Plumbing", href: "/services/plumbing" },
-    { name: "Fencing", href: "/services/fencing" },
-    { name: "Gardening", href: "/services/gardening" },
-    { name: "Clearance & Removals", href: "/services/clearance-removals" },
-  ];
 
   const navLinks = [
     { name: "Home", href: "/" },
@@ -97,8 +85,8 @@ export default function Header() {
                     <div className="bg-white rounded-lg shadow-lg border border-gray-200 py-2 mt-2">
                       {services.map((service) => (
                         <Link
-                          key={service.name}
-                          href={service.href}
+                          key={service.slug}
+                          href={`/services/${service.slug}`}
                           className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors font-extrabold text-lg font-medium"
                         >
                           {service.name}
@@ -186,8 +174,8 @@ export default function Header() {
                   <div className="mt-2 ml-4 flex flex-col space-y-2">
                     {services.map((service) => (
                       <Link
-                        key={service.name}
-                        href={service.href}
+                        key={service.slug}
+                        href={`/services/${service.slug}`}
                         className="text-gray-600 hover:text-blue-600 font-medium transition-colors text-sm"
                         onClick={() => {
                           setIsMenuOpen(false);
