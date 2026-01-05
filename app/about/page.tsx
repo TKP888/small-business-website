@@ -7,7 +7,7 @@ export default function About() {
   return (
     <>
       <Header />
-      <main className="min-h-screen">
+      <main className="min-h-auto">
         <section className="py-16 md:py-24 bg-purple-950">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
@@ -16,7 +16,7 @@ export default function About() {
                 <div className="flex-shrink-0">
                   <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-lg">
                     <Image
-                      src="/owner.jpg"
+                      src="/lewis.jpg"
                       alt="Lewis - Owner of Vercoe Property Maintenance"
                       width={320}
                       height={320}
