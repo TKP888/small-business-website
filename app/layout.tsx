@@ -2,8 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Contractor Business",
-  description: "Professional contractor services",
+  title: "Vercoe Property Maintenance",
+  description: "Professional property maintenance and construction services",
+  icons: {
+    icon: "/vpm-favicon.svg",
+  },
 };
 
 export default function RootLayout({
@@ -13,10 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
-
